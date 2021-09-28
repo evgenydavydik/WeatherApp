@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowsBackground">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/NameToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/indicatorProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/toolbarToday"
+        app:layout_constraintStart_toStartOf="@id/toolbarToday"
+        app:layout_constraintTop_toBottomOf="@id/toolbarToday"
+        tools:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicatorProgress">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivWeather"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="15dp"
+                android:contentDescription="@string/weather"
+                app:layout_constraintBottom_toTopOf="@id/tvLocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_weather_forecast" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                style="@style/Params"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvWeather_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivWeather"
+                tools:text="London" />
+
+            <TextView
+                android:id="@+id/tvWeather_title"
+                style="@style/Params"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/ivHumidity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLocation"
+                tools:text="22C|Sunny" />
+
+            <ImageView
+                android:id="@+id/ivHumidity"
+                style="@style/IconImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/humidity"
+                android:src="@drawable/ic_humidity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivPressure"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                style="@style/Params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/ivHumidity"
+                app:layout_constraintStart_toStartOf="@id/ivHumidity"
+                app:layout_constraintTop_toBottomOf="@id/ivHumidity"
+                tools:text="22C|Sunny" />
+
+            <ImageView
+                android:id="@+id/ivPressure"
+                style="@style/IconImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pressure"
+                android:src="@drawable/ic_pressure"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivClouds"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivHumidity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPressure"
+                style="@style/Params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/ivPressure"
+                app:layout_constraintStart_toStartOf="@id/ivPressure"
+                app:layout_constraintTop_toBottomOf="@id/ivPressure"
+                tools:text="22C|Sunny" />
+
+            <ImageView
+                android:id="@+id/ivClouds"
+                style="@style/IconImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/clouds"
+                android:src="@drawable/ic_cloud"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivPressure"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvClouds"
+                style="@style/Params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/ivClouds"
+                app:layout_constraintStart_toStartOf="@id/ivClouds"
+                app:layout_constraintTop_toBottomOf="@id/ivClouds"
+                tools:text="22C|Sunny" />
+
+            <ImageView
+                android:id="@+id/ivGustWind"
+                style="@style/IconImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/gust_wind"
+                android:src="@drawable/ic_gust_wind"
+                app:layout_constraintEnd_toStartOf="@+id/ivSpeedWind"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClouds" />
+
+            <TextView
+                android:id="@+id/tvGustWind"
+                style="@style/Params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/ivGustWind"
+                app:layout_constraintStart_toStartOf="@id/ivGustWind"
+                app:layout_constraintTop_toBottomOf="@id/ivGustWind"
+                tools:text="22C|Sunny" />
+
+            <ImageView
+                android:id="@+id/ivSpeedWind"
+                style="@style/IconImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:contentDescription="@string/speed_wind"
+                android:src="@drawable/ic_speed_wind"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivGustWind"
+                app:layout_constraintTop_toBottomOf="@id/tvClouds" />
+
+            <TextView
+                android:id="@+id/tvSpeedWind"
+                style="@style/Params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/ivSpeedWind"
+                app:layout_constraintStart_toStartOf="@id/ivSpeedWind"
+                app:layout_constraintTop_toBottomOf="@id/ivSpeedWind"
+                tools:text="22C|Sunny" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnShare"
+                style="@style/MyButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSpeedWind" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

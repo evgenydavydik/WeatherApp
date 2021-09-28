@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">WeatherApp</string>
+    <string name="app_name">Weather app</string>
+    <string name="wake_up_yore_internet_connection_to_access_this_part_of_the_application">Wake up your internet connection to access this part of the application.</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="no_internet_connection">no internet connection</string>
+    <string name="share">Share</string>
+    <string name="speed_wind">speed wind</string>
+    <string name="gust_wind">gust wind</string>
+    <string name="pressure">pressure</string>
+    <string name="clouds">clouds</string>
+    <string name="humidity">humidity</string>
+    <string name="weather">weather</string>
+    <string name="today">Today</string>
+    <string name="imageweather">imageWeather</string>
+    <string name="forecast">Forecast</string>
 </resources>
