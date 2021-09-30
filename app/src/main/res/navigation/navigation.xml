@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/todayFragment">
+
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.davydikes.weatherapp.screen.fragment_today.FragmentToday"
+        android:label="TodayFragment"
+        tools:layout="@layout/fragment_today"/>
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.davydikes.weatherapp.screen.fragment_forecast.FragmentForecast"
+        android:label="ForecastFragment"
+        tools:layout="@layout/fragment_forecast"/>
+
+</navigation>
