@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation.xml"
-    app:startDestination="@id/todayFragment">
+    app:startDestination="@id/fragmentToday">
 
     <fragment
-        android:id="@+id/todayFragment"
+        android:id="@+id/fragmentToday"
         android:name="com.davydikes.weatherapp.screen.fragment_today.FragmentToday"
-        android:label="TodayFragment"
+        android:label="FragmentToday"
         tools:layout="@layout/fragment_today"/>
     <fragment
-        android:id="@+id/forecastFragment"
+        android:id="@+id/fragmentForecast"
         android:name="com.davydikes.weatherapp.screen.fragment_forecast.FragmentForecast"
-        android:label="ForecastFragment"
+        android:label="FragmentForecast"
         tools:layout="@layout/fragment_forecast"/>
 
 </navigation>

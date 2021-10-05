@@ -158,13 +158,13 @@
                 tools:text="22C|Sunny" />
 
             <ImageView
-                android:id="@+id/ivGustWind"
+                android:id="@+id/ivDirectionWind"
                 style="@style/IconImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:contentDescription="@string/gust_wind"
-                android:src="@drawable/ic_gust_wind"
+                android:contentDescription="@string/direction_wind"
+                android:src="@drawable/ic_direction_wind"
                 app:layout_constraintEnd_toStartOf="@+id/ivSpeedWind"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -175,9 +175,9 @@
                 style="@style/Params"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@id/ivGustWind"
-                app:layout_constraintStart_toStartOf="@id/ivGustWind"
-                app:layout_constraintTop_toBottomOf="@id/ivGustWind"
+                app:layout_constraintEnd_toEndOf="@id/ivDirectionWind"
+                app:layout_constraintStart_toStartOf="@id/ivDirectionWind"
+                app:layout_constraintTop_toBottomOf="@id/ivDirectionWind"
                 tools:text="22C|Sunny" />
 
             <ImageView
@@ -190,7 +190,7 @@
                 android:src="@drawable/ic_speed_wind"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/ivGustWind"
+                app:layout_constraintStart_toEndOf="@+id/ivDirectionWind"
                 app:layout_constraintTop_toBottomOf="@id/tvClouds" />
 
             <TextView
